@@ -1,8 +1,8 @@
-# Objekte
+# Objects
 
-## Methoden
-* Methoden sind Functions, die eine Variable als *Receiver* haben.
-* Als Receiver-Typen können nur eigene Typen des selben packages verwendet werden.
+## Methods
+* Methods are functions with a _Receiver_-Variable
+* Receivers can only be of a type contained in the current package
 
 ```go
 type Point [2]int
@@ -15,8 +15,8 @@ func (p Point) Add(pointToAdd Point) Point {
 ```
 
 ## Objekte
-* Damit Methoden die Daten eines Objektes verändern können, müssen sie den Pointer-Typ als Receiver haben.
-* Meist werden Structs als Grundlage für *Klassen* verwendet.
+* For Methods to be able to manipulate the state of an object, the receiver type needs to be a pointer.
+* Usually structs are used for something similiar to classes.
 
 ```go
 type Item struct {
@@ -29,11 +29,10 @@ func (item *Item) MoveTo(vector Point) {
 }
 ```
 
-## Konstruktoren
-* In Go gibt es keine expliziten Konstruktoren.
-* Konvention ist es, als Konstruktor eine Funktion `NewTypname() *Typename` bereit zu stellen.
-* Häufig reichen jedoch auch die Default-Werte eines Type als Initialisierung aus (Doku lesen).
-
+## Constructors
+* In go there are no explizit constructors
+* The convention is to use a function like `NewTypname() *Typename` for construction.
+* A lot of times the default values of struct attributes are enough and a constructor is not necessary.
 
 ```go
 func NewItem(name string) *Item {
@@ -50,8 +49,9 @@ func (item *Item) MoveInDirection(vector Point, time int) {
 ```
 
 ## Embedding
-* Structs in Go können andere Structs einbetten.
-* An das eingebettete Struct wird automatisch delegiert.
+* Structs can embed other struct types
+* Calls can be delegated to an embedded struct automatically.
+
 ```go
 type Starship struct {
 	Item
@@ -67,13 +67,13 @@ func NewStarship(name string, speed int) *Starship {
 }
 
 func travel() {
-  herzAusGold := NewStarship("HerzAusGold", 42)
+  herzAusGold := NewStarship("Enterprise", 42)
   herzAusGold.MoveTo(Point{1, 1})
 }
 ```
 
-## Überschreiben
-* Methoden eines eingebetten Type können auch überschrieben werden
+## Method override
+* Methods of embedded types can be overridden
 
 ```go
 func (ship *Starship) MoveInDirection(vector Point, time int) {
@@ -84,9 +84,9 @@ func (ship *Starship) MoveInDirection(vector Point, time int) {
 ```
 
 ## Interfaces
-* Go kennt keine Vererbung, aber Interfaces.
-* Interfaces folgen dem Duck-Typing Ansatz: Was aussieht wie eine Ente, ist auch eine Ente!
-* Der Consumer legt das Interface fest, nicht der implementierer.
+* There is no inheritance, but there are interfaces.
+* Interfaces are defined by behaviour, not by state.
+* Interfaces in go are implemented with duck typing: If it looks like a duck, it is a duck!
 
 ```go
 
@@ -116,7 +116,7 @@ func Test_Stringer(t *testing.T) {
 
 ## Mocking
 
-Mocking kann in go nicht dynamisch erfolgen. Mock-Frameworks verlangen eine Mock-Generierung zur Entwicklungszeit. Die Mocks werden dann üblicherweise mit eingecheckt. Z.b. [GoMock](https://github.com/golang/mock)
+Mocking can not be dynamic. Mock-Frameworks generate mocks at development time and they are usually checked in with the rest of your code. [GoMock](https://github.com/golang/mock) is a good example for a mock framework.
 
 ```
 	ctrl := gomock.NewController(t)
@@ -127,7 +127,7 @@ Mocking kann in go nicht dynamisch erfolgen. Mock-Frameworks verlangen eine Mock
 	mock.EXPECT(). ...
 ```
     
-Code Generierung in go:
+Code generation in go:
 ```
 //go:generate go get github.com/golang/mock/mockgen
 //go:generate $GOPATH/bin/mockgen -self_package objects -package objects -destination $GOPATH/src/objects/mocks_test.go objects Flyable
@@ -138,12 +138,11 @@ func ...
 $ go generate .
 ```
 
-## Übungen
+## Exercises
 
-### Übung: Key-Value Objekt Orientiert
-Baue Deinen KV-Store so um, dass er intern eine Klasse Store verwendet,
-die die Operationen auf den internen Storage abstrahiert.
+### Exercise: object oriented Key-Value store
+Change the KV-store so that it uses a Store interface internally, abstracting all operations on the internal storage.
 
-### Übung: Testen mit Mocks
-* Teste die Klasse Store
-* Teste den aufrufenden Code der Klasse Store, gegen ein Mock-Objekt 
+### Exercise: Testing with Mocks
+* Test the Store
+* Test code calling the store, but use a mock instead of the real store

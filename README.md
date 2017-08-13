@@ -2,55 +2,49 @@
 
 ## Grundlagen
 
-### [01 Basics](01_basics.md)
+### [01 basics](01_basics.md)
 - Hello World
-- Datentypen & Variablen
-- Strings
-- Call by Value
-- Text Ausgaben
+- data types & variables
+- strings
+- Call by Value & by Reference
+- Text output
 - Functions
-- Kontrollstrukturen
-- Übung: Multiplikationstabelle
+- Control structures
+- Exercise: multiplication table
 
-### [02 Dateien](02_dateien.md)
-- Das Package `OS`
-- Schreiben in eine Datei
-- Exec Beispiel
-- Übung: cat Befehl
-- Übung: wc Befehl
-- Übung: tac Befehl
+### [02 files](02_files.md)
+- The `os` package
+- Write into a file
+- Exec Example
+- Exercise: wc command
+- Exercise: cat command
+- Exercise: tac command
 
-### [03 Structs und Pointer](03_structs_und_pointer.md)
+### [03 structs and pointers](03_structs_and_pointers.md)
 - Structs
-- Pointer
-- Pointer und Structs
-- Pointer und Slices/Maps
-- Übung: Key-Value Store
+- Pointers
+- Pointer and Structs
+- Pointer and Slices/Maps
+- Exercise: Key-Value store
 
-### [04 Projektstruktur](04_projektstruktur.md)
+### [04 Projectstrcture](04_projectstructure.md)
 - Gopath
 - Go Toolchain
 - Packages
 
-### [05 Testing](05_testing.md)
+### [05 testing](05_testing.md)
 - Tests
 - stretchr/testify
-- Test mehrerer Packages
-- Coverage anschauen
+- Testing multiple packages
+- Coverage
 - Data Driven Tests
 - Benchmarks
-- Übung: Taschenrechner Programm
-- Übung: Benchmarking des Key-Value Stores
+- Exercise: Calculator with tests
+- Exercise: Benchmarking the Key-Value store
 
-### [06 Weitere Grundlagen](06_weitere_grundlagen.md)
-- defer
-- Panic, Recover
-- Type switches
-
-### [07 Objekte](07_objekte.md)
-- Methoden
-- Objekte
-- Konstruktoren
+### [06 objects and interfaces](06_objects_and_interfaces.md)
+- Methods
+- Objects
 - Embedding
 - Überschreiben
 - Interfaces
@@ -58,16 +52,14 @@
 - Übung: Key-Value Objekt Orientiert
 - Übung: Testen mit Mocks
 
-## Web Development
-
-### [08 Web Development Teil1](08_web_development_teil1.md)
+### [08 http](08_web_development_teil1.md)
 - Http Basics
 - Templating
 - Nette Features im Http Package
 - `http.Client`
 - Package `http/httptest`
 
-### [09 Web Development Teil2](09_web_development_teil2.md)
+### [09 http extended](09_web_development_teil2.md)
 - HTTP2 mit Go
 - Graceful Shutdown
 - Middleware
