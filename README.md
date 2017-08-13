@@ -1,6 +1,4 @@
-# Golang Schulung
-
-## Grundlagen
+# Golang Course
 
 ### [01 basics](01_basics.md)
 - Hello World
@@ -46,60 +44,22 @@
 - Methods
 - Objects
 - Embedding
-- Überschreiben
+- Overriding
 - Interfaces
 - Mocking
-- Übung: Key-Value Objekt Orientiert
-- Übung: Testen mit Mocks
+- Exercise: object oriented Key-Value
+- Exercise: Testing with mocks
 
-### [08 http](08_web_development_teil1.md)
+### 08 http
 - Http Basics
-- Templating
-- Nette Features im Http Package
-- `http.Client`
-- Package `http/httptest`
-
-### [09 http extended](09_web_development_teil2.md)
+- TLS
 - HTTP2 mit Go
-- Graceful Shutdown
+- Nette Features im Http Package
+
+### 09 http extended
+- `http.Client`
 - Middleware
-- Context
 - Web Frameworks & alternative Router
-- Web Sockets
-- Databases mit `jinzhu/gorm`
-
-## Erweiterte Themen
-
-### [10 Nebenlaufigkeit](10_nebenlaufigkeit.md)
-- Goroutinen
-- Channel
-- Buffered Channel
-- Das `sync` Package
-
-### [11 Native Development](11_native_development.md)
-- CGO
-- Laden von Shared Libraries
-- Cross Compiling
-
-### [12 Golang im Docker Container](12_go_docker.md)
-
-### [13 Libs](13_libs.md)
-- awesome-go
-- Package `time`
-- Argumente und Umgebungsvariablen
-- Logging
-- Bolt
-
-### [Debugging und Profiling](14_debugging_profiling.md)
-- Race detection
-- Debugging mit delve
-- Profiling
-- GODEBUG
-
-### [Dependency Management](15_dependency_management.md)
-- `vendor` Verzeichnis
-- glide
-- Alternativen
 
 # Gute Videos
 - [Simplicity is Complicated](https://www.youtube.com/watch?v=rFejpH_tAHM), Rob Pike
