@@ -61,7 +61,7 @@
 - Middleware
 - Web Frameworks & alternative Router
 
-# Gute Videos
+# Videos
 - [Simplicity is Complicated](https://www.youtube.com/watch?v=rFejpH_tAHM), Rob Pike
 - [Concurrency Is Not Parallelism](https://www.youtube.com/watch?v=oV9rvDllKEg), Rob Pike
 - [Go Concurrency Patterns](https://www.youtube.com/watch?v=f6kdp27TYZs), Rob Pike
