@@ -50,15 +50,15 @@
 - Exercise: object oriented Key-Value
 - Exercise: Testing with mocks
 
-### 08 http
+### [07 http](07_http.md)
 - Http Basics
-- TLS
-- HTTP2 mit Go
-- Nette Features im Http Package
-
-### 09 http extended
+- Handy features of the `http` package
 - `http.Client`
+
+### [08 http extended](08_http_extended.md)
+- TLS & HTTP2 mit Go
 - Middleware
+- http testing
 - Web Frameworks & alternative Router
 
 # Videos
