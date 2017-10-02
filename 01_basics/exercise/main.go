@@ -20,7 +20,10 @@ func multiplcationTable(n int) [][]int {
 		nums = append(nums, i)
 	}
 
+	
+
 	lines := [][]int{}
+	lines.typeof
 	for _, num := range nums {
 		line := []int{}
 		for _, k := range nums {

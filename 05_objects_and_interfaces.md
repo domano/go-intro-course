@@ -114,30 +114,6 @@ func Test_Stringer(t *testing.T) {
 }
 ```
 
-## Mocking
-
-Mocking can not be dynamic. Mock-Frameworks generate mocks at development time and they are usually checked in with the rest of your code. [GoMock](https://github.com/golang/mock) is a good example for a mock framework.
-
-```
-	ctrl := gomock.NewController(t)
-	defer ctrl.Finish()
-
-	mock := NewMockMyInterface(ctrl)
-
-	mock.EXPECT(). ...
-```
-    
-Code generation in go:
-```
-//go:generate go get github.com/golang/mock/mockgen
-//go:generate $GOPATH/bin/mockgen -self_package objects -package objects -destination $GOPATH/src/objects/mocks_test.go objects Flyable
-func ...
-```
-
-```
-$ go generate .
-```
-
 ## Exercises
 
 ### Exercise: object oriented Key-Value store

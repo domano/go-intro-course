@@ -13,5 +13,5 @@ func main() {
 	}
 	defer file.Close()
 
-	file.WriteString("Hello World\n")
+	file.WriteString("Hello irbid\n")
 }

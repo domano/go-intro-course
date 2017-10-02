@@ -23,7 +23,7 @@ or using the [Golang Playground](https://play.golang.org/)
 ## Data types & variables
 * Dynamic Memory Management
 * Strongly typed
-* All variables have a save initial value
+* All variables have a safe initial value
 Declaration and allocation:
 ```go
 var i int

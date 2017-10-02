@@ -9,6 +9,7 @@
 - Functions
 - Control structures
 - Exercise: multiplication table
+- Further basics: [errors, types, conversion...](basics_extended.md)
 
 ### [02 files](02_files.md)
 - The `os` package
@@ -30,36 +31,38 @@
 - Go Toolchain
 - Packages
 
-### [05 testing](05_testing.md)
+### [05 objects and interfaces](05_objects_and_interfaces.md)
+- Methods
+- Objects
+- Embedding
+- Overriding
+- Interfaces
+- Exercise: object oriented Key-Value
+- Exercise: Testing with mocks
+
+### [06 http](06_http.md)
+- Http Basics
+- Handy features of the `http` package
+- `http.Client`
+
+### [07 http extended](07_http_extended.md)
+- TLS & HTTP2 mit Go
+- Middleware
+- http testing
+- Web Frameworks & alternative Router
+
+### [08 testing](08_testing.md)
 - Tests
 - stretchr/testify
 - Testing multiple packages
 - Coverage
 - Data Driven Tests
 - Benchmarks
+- Mocking
 - Exercise: Calculator with tests
 - Exercise: Benchmarking the Key-Value store
 
-### [06 objects and interfaces](06_objects_and_interfaces.md)
-- Methods
-- Objects
-- Embedding
-- Overriding
-- Interfaces
-- Mocking
-- Exercise: object oriented Key-Value
-- Exercise: Testing with mocks
 
-### [07 http](07_http.md)
-- Http Basics
-- Handy features of the `http` package
-- `http.Client`
-
-### [08 http extended](08_http_extended.md)
-- TLS & HTTP2 mit Go
-- Middleware
-- http testing
-- Web Frameworks & alternative Router
 
 # Videos
 - [Simplicity is Complicated](https://www.youtube.com/watch?v=rFejpH_tAHM), Rob Pike
